@@ -1,0 +1,1025 @@
+:root{
+  --charcoal:#211D18;
+  --ember:#2C2820;
+  --paper:#F2E8D3;
+  --paper-light:#FAF4E6;
+  --ink:#2B2115;
+  --gold:#E2A73A;
+  --leaf:#4C6B45;
+  --rust:#B5502E;
+  --enamel:#2E6C86;
+}
+
+/* =========================
+   RESET
+========================= */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Work Sans',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.5;
+  overflow-x:hidden;
+}
+
+h1,
+h2,
+h3,
+h4{
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-weight:700;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+button{
+  font-family:inherit;
+}
+
+.wrap{
+  max-width:1100px;
+  margin:auto;
+  padding:0 24px;
+}
+
+section{
+  padding:88px 0;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(33,29,24,.95);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(226,167,58,.25);
+}
+
+.nav-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-top:14px;
+  padding-bottom:14px;
+}
+
+.brand{
+  color:var(--paper);
+  font-size:1.15rem;
+  font-weight:700;
+}
+
+.brand span{
+  color:var(--gold);
+}
+
+.navlinks{
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.navlinks a{
+  color:#D9CDB2;
+  font-size:.9rem;
+  font-weight:600;
+  transition:.2s;
+}
+
+.navlinks a:hover,
+.navlinks a.active{
+  color:var(--gold);
+}
+
+.nav-cta{
+  background:var(--gold);
+  color:var(--charcoal)!important;
+  padding:9px 18px;
+  border-radius:100px;
+  font-weight:700!important;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  position:relative;
+  background:
+    radial-gradient(
+      ellipse at 30% 20%,
+      #34291d 0%,
+      var(--charcoal) 58%
+    );
+  color:var(--paper);
+  padding:120px 0 100px;
+  overflow:hidden;
+}
+
+.hero-inner{
+  max-width:720px;
+}
+
+.eyebrow,
+.kicker{
+  font-family:'Caveat',cursive;
+  font-size:1.35rem;
+  color:var(--gold);
+  margin-bottom:8px;
+}
+
+.hero h1{
+  font-size:clamp(2.8rem,7vw,5rem);
+  line-height:.98;
+  text-transform:uppercase;
+  margin-bottom:22px;
+}
+
+.hero h1 em{
+  color:var(--gold);
+  font-style:normal;
+}
+
+.lede{
+  font-size:1.15rem;
+  color:#D9CDB2;
+  max-width:600px;
+  margin-bottom:30px;
+}
+
+
+/* =========================
+   HERO BADGES
+========================= */
+
+.hero-badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-bottom:32px;
+}
+
+.badge{
+  background:rgba(242,232,211,.08);
+  border:1px solid rgba(242,232,211,.18);
+  padding:8px 13px;
+  border-radius:100px;
+  color:#E9DFC7;
+  font-size:.86rem;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-ctas{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:14px 24px;
+  border-radius:100px;
+  font-weight:700;
+  border:1px solid transparent;
+  transition:.2s;
+  cursor:pointer;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-primary{
+  background:var(--gold);
+  color:var(--charcoal);
+}
+
+.btn-ghost{
+  border-color:rgba(242,232,211,.4);
+  color:var(--paper);
+}
+
+.btn-leaf{
+  background:var(--leaf);
+  color:white;
+}
+
+.btn-leaf:hover{
+  box-shadow:0 8px 22px rgba(76,107,69,.3);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.light{
+  background:var(--paper-light);
+  border-top:1px solid #e4d6b3;
+  border-bottom:1px solid #e4d6b3;
+}
+
+.sec-head{
+  margin-bottom:40px;
+}
+
+.sec-head h2{
+  font-size:clamp(2rem,4vw,2.8rem);
+  margin-bottom:10px;
+}
+
+.sec-head p{
+  color:#4a3e2c;
+  max-width:650px;
+}
+
+
+/* =========================
+   HOME CARDS
+========================= */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:white;
+  border:1px solid #e4d6b3;
+  border-radius:16px;
+  padding:26px;
+  box-shadow:0 8px 22px rgba(43,33,21,.06);
+}
+
+.card-icon{
+  font-size:2rem;
+  margin-bottom:12px;
+}
+
+.card h3{
+  margin-bottom:7px;
+}
+
+.card p{
+  color:#655842;
+  font-size:.92rem;
+}
+
+
+/* =========================
+   DARK FEATURE
+========================= */
+
+.feature{
+  background:var(--charcoal);
+  color:var(--paper);
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:30px;
+  align-items:center;
+}
+
+.feature-box{
+  background:var(--ember);
+  border:1px solid rgba(226,167,58,.2);
+  border-radius:18px;
+  padding:30px;
+}
+
+.feature-box h3{
+  color:var(--gold);
+  font-size:1.5rem;
+  margin-bottom:8px;
+}
+
+.feature-box p{
+  color:#c9bda0;
+  margin-bottom:18px;
+}
+
+
+/* =========================
+   PAGE HERO
+========================= */
+
+.page-hero{
+  background:var(--charcoal);
+  color:var(--paper);
+  padding:70px 0;
+}
+
+.page-hero h1{
+  font-size:clamp(2.4rem,6vw,4rem);
+}
+
+.page-hero p{
+  color:#c9bda0;
+  max-width:620px;
+  margin-top:10px;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.toggle{
+  display:inline-flex;
+  background:var(--charcoal);
+  padding:5px;
+  border-radius:100px;
+  margin-bottom:25px;
+}
+
+.toggle button{
+  border:0;
+  background:transparent;
+  color:#c9bda0;
+  padding:10px 20px;
+  border-radius:100px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.toggle button.active{
+  background:var(--gold);
+  color:var(--charcoal);
+}
+
+.toggle button:hover{
+  color:white;
+}
+
+.toggle button.active:hover{
+  color:var(--charcoal);
+}
+
+
+/* =========================
+   DAY BUTTONS
+========================= */
+
+.day-tabs{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding-bottom:8px;
+  margin-bottom:28px;
+}
+
+.day-tabs button{
+  flex:0 0 auto;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  border:1.5px solid #d9c79c;
+  background:var(--paper);
+  color:var(--ink);
+  font-weight:700;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.day-tabs button:hover{
+  border-color:var(--rust);
+}
+
+.day-tabs button.active{
+  background:var(--rust);
+  border-color:var(--rust);
+  color:white;
+}
+
+
+/* =========================
+   MENU LAYOUT
+========================= */
+
+.plate-grid{
+  display:grid;
+  grid-template-columns:250px 1fr;
+  gap:55px;
+  align-items:center;
+}
+
+.plate-visual{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+
+/* =========================
+   SMALL FOOD IMAGE
+   ONLY ONE IMAGE RULE
+========================= */
+
+.meal-photo-card{
+  width:150px;
+  background:#ffffff;
+  padding:5px;
+  border-radius:14px;
+  margin:0 auto;
+  box-shadow:0 8px 18px rgba(43,33,21,.16);
+}
+
+.meal-photo-card img{
+  width:140px;
+  height:100px;
+  display:block;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.meal-photo-label{
+  text-align:center;
+  padding:6px 2px 3px;
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:.78rem;
+  font-weight:700;
+  color:var(--ink);
+}
+
+
+/* =========================
+   IMAGE CAPTION
+========================= */
+
+.plate-caption{
+  width:150px;
+  margin:9px auto 0;
+  text-align:center;
+  color:#6b5c40;
+  font-size:.72rem;
+}
+
+
+/* =========================
+   MENU DETAILS
+========================= */
+
+.meal-label{
+  color:var(--enamel);
+  font-weight:700;
+  font-size:.82rem;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  margin-bottom:8px;
+}
+
+.plate-details h2{
+  font-size:2rem;
+}
+
+.food-list{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin:18px 0;
+}
+
+.food-list li{
+  display:flex;
+  align-items:center;
+  gap:11px;
+}
+
+.dot{
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  flex:none;
+}
+
+.note-box{
+  background:white;
+  border-left:3px solid var(--leaf);
+  padding:12px 16px;
+  border-radius:6px;
+  color:#4a3e2c;
+  font-size:.88rem;
+}
+
+.free-tag{
+  display:inline-block;
+  background:var(--leaf);
+  color:white;
+  font-size:.72rem;
+  font-weight:800;
+  padding:3px 9px;
+  border-radius:100px;
+  margin-left:8px;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-wrap{
+  overflow-x:auto;
+  margin-top:55px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:650px;
+}
+
+th,
+td{
+  text-align:left;
+  padding:14px 12px;
+  border-bottom:1px solid #e4d6b3;
+  vertical-align:top;
+}
+
+th{
+  color:var(--rust);
+  font-size:.78rem;
+  text-transform:uppercase;
+}
+
+
+/* =========================
+   PRICING
+========================= */
+
+.pricing{
+  background:var(--charcoal);
+  color:var(--paper);
+}
+
+.pricing .sec-head p{
+  color:#c9bda0;
+}
+
+.price-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+  margin-bottom:22px;
+}
+
+.price-card{
+  background:var(--ember);
+  border:1px solid rgba(226,167,58,.2);
+  border-radius:16px;
+  padding:28px;
+}
+
+.price-card h3{
+  color:#e9dfc7;
+}
+
+.amount{
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:2.15rem;
+  font-weight:800;
+  color:var(--gold);
+  margin:6px 0;
+}
+
+.amount small{
+  font-size:.9rem;
+  color:#c9bda0;
+}
+
+.price-card p{
+  color:#a89a7b;
+  font-size:.88rem;
+}
+
+.pricing-subscription{
+  margin-top:60px;
+}
+
+.offer-strip{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.offer{
+  background:linear-gradient(
+    135deg,
+    var(--rust),
+    #8f3c20
+  );
+  border-radius:16px;
+  padding:28px;
+  color:white;
+}
+
+.offer h3{
+  font-size:.9rem;
+  text-transform:uppercase;
+  color:#f4dcc9;
+}
+
+.offer p{
+  color:#f4dcc9;
+  font-size:.88rem;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:45px;
+}
+
+.contact-list{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  margin-top:24px;
+}
+
+.contact-list li{
+  display:flex;
+  align-items:center;
+  gap:13px;
+}
+
+.icon-circle{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:var(--charcoal);
+  color:var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:none;
+}
+
+.whatsapp-card{
+  background:var(--leaf);
+  color:white;
+  border-radius:18px;
+  padding:32px;
+}
+
+.whatsapp-card h3{
+  font-size:1.5rem;
+  margin-bottom:8px;
+}
+
+.whatsapp-card p{
+  color:#dfeadb;
+  margin-bottom:22px;
+}
+
+.whatsapp-button{
+  background:white;
+  color:var(--leaf);
+  width:100%;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:var(--charcoal);
+  color:#a89a7b;
+  text-align:center;
+  padding:34px 0;
+  font-size:.85rem;
+}
+
+footer .chalk{
+  color:var(--gold);
+  font-family:'Caveat',cursive;
+  font-size:1.3rem;
+  display:block;
+  margin-bottom:6px;
+}
+
+
+/* =========================
+   MOBILE / TABLET
+========================= */
+
+@media(max-width:800px){
+
+  .cards,
+  .feature-grid,
+  .contact-grid,
+  .price-grid,
+  .offer-strip{
+    grid-template-columns:1fr;
+  }
+
+  .plate-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .plate-details{
+    width:100%;
+  }
+
+}
+
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+@media(max-width:720px){
+
+  .navlinks{
+    gap:7px;
+  }
+
+  /* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(33, 29, 24, 0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(226, 167, 58, 0.25);
+}
+
+.nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.brand {
+    color: var(--cream-text);
+    font-size: 1.15rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+}
+
+.brand span {
+    color: var(--gold);
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.navlinks a {
+    color: #D9CDB2;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+}
+
+.navlinks a:hover,
+.navlinks a.active {
+    color: var(--gold);
+}
+
+.nav-cta {
+    background: var(--gold);
+    color: var(--charcoal) !important;
+    padding: 9px 17px;
+    border-radius: 100px;
+    font-weight: 700 !important;
+}
+
+
+/* =========================
+   PHONE NAVIGATION
+========================= */
+
+@media (max-width: 760px) {
+
+    .nav-wrap {
+        flex-direction: column;
+        gap: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .brand {
+        font-size: 1.05rem;
+    }
+
+    .navlinks {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .navlinks a {
+        font-size: 0.78rem;
+        padding: 6px 8px;
+    }
+
+    .nav-cta {
+        padding: 7px 13px !important;
+    }
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 420px) {
+
+    .nav-wrap {
+        gap: 8px;
+    }
+
+    .brand {
+        font-size: 1rem;
+    }
+
+    .navlinks {
+        gap: 4px;
+    }
+
+    .navlinks a {
+        font-size: 0.72rem;
+        padding: 5px 6px;
+    }
+
+    .nav-cta {
+        padding: 6px 10px !important;
+    }
+}
+
+  .nav-cta{
+    padding:8px 13px;
+    font-size:.8rem;
+  }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media(max-width:520px){
+
+  section{
+    padding:58px 0;
+  }
+
+  .hero{
+    padding:85px 0;
+  }
+
+  .wrap{
+    padding:0 18px;
+  }
+
+  .page-hero{
+    padding:55px 0;
+  }
+
+  .toggle button{
+    padding:9px 15px;
+    font-size:.85rem;
+  }
+
+  .day-tabs{
+    margin-bottom:24px;
+  }
+
+  .day-tabs button{
+    width:42px;
+    height:42px;
+    font-size:.75rem;
+  }
+
+  /* =========================
+   MEAL PHOTO
+========================= */
+
+.meal-photo-card {
+    width: 320px;
+    max-width: 100%;
+    background: #fff;
+    border-radius: 18px;
+    padding: 10px;
+    box-shadow: 0 12px 30px rgba(43, 33, 21, 0.16);
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.meal-photo-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.meal-photo-label {
+    text-align: center;
+    padding: 10px 6px 5px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 0.95rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .meal-photo-card {
+        width: 290px;
+    }
+
+    .meal-photo-card img {
+        height: 210px;
+    }
+
+}
+}
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+a:focus-visible,
+button:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:3px;
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+    scroll-behavior:auto!important;
+    transition:none!important;
+    animation:none!important;
+  }
+
+}
